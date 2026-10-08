@@ -2,7 +2,7 @@
 
 สตูดิโอภาษาไทยสำหรับ Doctor Top CPD: อัดเสียงของตัวเองและประโยคยินยอม → สร้างโปรไฟล์เสียง → พิมพ์บท → ฟังและดาวน์โหลด MP3/WAV ใช้ได้ผ่านคอมพิวเตอร์และมือถือ **เปิดเว็บแล้วใช้ได้เลย ไม่มีรหัสผ่าน**
 
-- เว็บไซต์: `https://doctor-top-cpd.vercel.app` — URL เป้าหมาย ตรวจสถานะยืนยันใน [บันทึกการตรวจ](docs/VERIFICATION.md)
+- เว็บไซต์พร้อมใช้: [doctor-top-cpd.vercel.app](https://doctor-top-cpd.vercel.app) — ไม่มีรหัสผ่าน
 - Repository: [gobank01/doctor-top-cpd](https://github.com/gobank01/doctor-top-cpd)
 - [คู่มือติดตั้งบน Vercel](docs/DEPLOY-VERCEL.md) · [Prompt พร้อมใช้](docs/PROMPTS.md) · [ข้อมูลและสิทธิ์การเข้าถึง](docs/SECURITY.md)
 

@@ -17,13 +17,13 @@
 - helper `create_session_secret.py` สร้าง secret สุ่ม 32 bytes ลงไฟล์เท่านั้น: ไม่แสดงค่าใน stdout/stderr, Unix mode `0600`, ไม่เขียนทับไฟล์เดิม ทดสอบในโฟลเดอร์ชั่วคราวและลบแล้ว
 - `scripts/check_release.py` ผ่าน: ตรวจ **31 public source files** ไม่มี credential/path patterns ที่ตั้งให้ตรวจ; local links ใน README/docs ถูกต้อง
 
-## รอผู้ดูแลบันทึกผล production
+## Production ที่ยืนยันแล้ว
 
-- [ ] production deployment Ready และ URL จริง (เป้าหมาย `https://doctor-top-cpd.vercel.app`)
-- [ ] production HTTP/UI เปิดทันทีโดยไม่มีหน้ารหัส คลังเสียง/ประวัติใหม่ว่าง สถานะบริการพร้อม
-- [ ] ตรวจหน้าจอ production บนขนาดจอมือถือและ desktop
+- [x] GitHub `main` เชื่อมกับ Vercel และ deployment สถานะ **Ready** ที่ [doctor-top-cpd.vercel.app](https://doctor-top-cpd.vercel.app)
+- [x] เปิดผ่าน HTTPS ได้ HTTP 200 โดยไม่ถามรหัสผ่าน; Gemini key, SDK และ FFmpeg พร้อม; คลังเสียงและประวัติเริ่มว่าง; ไม่เปิดเผย remote profile inventory
+- [x] Browser QA บนเว็บ production ผ่าน **320 / 390 / 768 / 1440 px × 3 views**: ไม่ล้นแนวนอน ไม่มี JavaScript errors, คุกกี้ anonymous ทำงาน, ร่างบทกลับมาหลัง reload และตรวจภาพหน้าจอมือถือ/desktop แล้ว
 
-ผลรายการข้างต้นเป็นสิ่งที่ต้องยืนยันหลัง deploy ห้ามถือว่า URL เป้าหมายเป็นหลักฐานว่า production พร้อมแล้ว
+การตรวจเว็บจริงข้างต้นอ่านสถานะและทดสอบหน้าเว็บ ไม่เรียกสร้างเสียงแบบเสียเงิน ไม่มีการอัดหรือย้ายเสียงของเจ้าของเดิม
 
 ## ขอบเขตการยืนยัน
 
