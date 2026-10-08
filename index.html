@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f3f6fb">
+<title>Doctor Top CPD — สตูดิโอโคลนเสียง</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f3f6fb;--card:#fff;--ink:#16233e;--muted:#66758d;--line:#e1e7f1;--accent:#3459e6;--accent-soft:#edf1ff;--navy:#172e57;--ok:#237358;--ok-soft:#e8f5ee;--warn:#8a5b13;--warn-soft:#fff4dc;--err:#b43743;--err-soft:#fff0f1;--rec:#c44351;--btn:var(--accent);--btn-ink:#fff;--shadow:0 8px 28px -16px #172e5726;--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "IBM Plex Sans Thai",sans-serif;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}button,a,input,select,textarea{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button,a,summary,input,textarea,select{outline-offset:4px} :focus-visible{outline:3px solid #8098ff}a{color:var(--accent);text-underline-offset:4px}button{transition:background .18s,box-shadow .18s,transform .18s}button:active:not(:disabled){transform:translateY(1px)}[hidden]{display:none!important}svg.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}.skip-link{position:fixed;top:-70px;left:16px;z-index:100;padding:10px 18px;background:var(--ink);color:white;border-radius:8px}.skip-link:focus{top:12px}.app-shell{display:grid;grid-template-columns:228px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;padding:34px 20px 22px;border-right:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;gap:38px}.brand{display:flex;gap:11px;align-items:center;color:var(--ink);text-decoration:none}.brand-mark{display:flex;align-items:center;justify-content:center;gap:3px;width:40px;height:42px;border-radius:12px;background:var(--accent);color:white;flex:none}.brand-mark i{display:block;width:3px;border-radius:2px;background:currentColor;height:13px}.brand-mark i:nth-child(2){height:23px}.brand-mark i:nth-child(3){height:30px}.brand-mark i:nth-child(4){height:19px}.brand-name{min-width:0;font:750 16px/1.25 "Plus Jakarta Sans",sans-serif;letter-spacing:-.5px}.brand-name small{display:block;font:500 10px/1.8 "Plus Jakarta Sans",sans-serif;letter-spacing:2px;text-transform:uppercase;margin-top:4px;color:var(--muted)}.nav-label,.eyebrow{font:600 10px/1.5 "Plus Jakarta Sans",sans-serif;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted)}.nav-label{padding:0 14px;margin:0 0 12px}.nav{display:grid;gap:7px}.nav-btn{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:12px 13px;border:0;background:transparent;color:var(--muted);border-radius:10px;font-size:14px;font-weight:500}.nav-btn:hover{background:var(--bg);color:var(--ink)}.nav-btn[aria-current="page"]{background:var(--accent-soft);color:var(--accent);font-weight:600}.nav-btn .nav-count{margin-left:auto;font:600 11px/1 "Plus Jakarta Sans",sans-serif;background:white;padding:5px 7px;border-radius:6px;min-width:24px;text-align:center}.sidebar-footer{margin-top:auto}.private-label{display:flex;gap:9px;align-items:center;border-top:1px solid var(--line);padding:20px 10px 12px;font-size:13px;color:var(--muted)}.private-label .icon{width:17px}.sidebar-note{font:500 10px "Plus Jakarta Sans",sans-serif;color:#75849b;letter-spacing:.7px;margin:20px 10px 0}.workspace{min-width:0;padding:0 40px 48px;max-width:1540px;width:100%;margin:auto}.topbar{height:85px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}.breadcrumb{display:flex;gap:12px;align-items:center;font-size:12px;color:var(--muted)}.breadcrumb strong{font-weight:500;color:var(--ink)}.pills{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.pill{display:inline-flex;align-items:center;gap:7px;font-size:11px;padding:4px 9px;border-radius:7px;color:var(--muted);background:white;border:1px solid var(--line)}.pill.ok:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ok)}.pill.ok{color:var(--ok)}.pill.bad{color:var(--err);background:var(--err-soft)}.pill.mock{color:var(--warn);background:var(--warn-soft)}.page-head{display:flex;justify-content:space-between;align-items:center;gap:22px;padding:32px 0 25px}.page-head .eyebrow{margin:0 0 7px;color:var(--accent)}h1{font-size:32px;line-height:1.4;font-weight:600;letter-spacing:-.8px;margin:0}.page-head p:not(.eyebrow){color:var(--muted);font-size:14px;margin:7px 0 0}.page-head .ghost{background:white;white-space:nowrap;display:flex;align-items:center;gap:7px;padding:10px 15px}.workspace-view{animation:enter .25s ease-out}@keyframes enter{from{opacity:.6;transform:translateY(5px)}to{opacity:1;transform:none}}.studio-grid{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:22px;align-items:start}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);min-width:0}.card h2{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:600;margin:0 0 5px;letter-spacing:-.3px}.card h2 .icon{color:var(--accent)}.section-caption{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.section-caption h2{margin:0}.editor .row2{margin-bottom:4px}.field{display:grid;gap:8px;margin:0 0 19px;min-width:0}.field label,.field-label{font-size:13px;font-weight:500;color:var(--ink)}input[type=text],select,textarea{width:100%;min-width:0;color:var(--ink);border:1px solid var(--line);border-radius:10px;background:#fafbfe;padding:11px 13px;transition:border-color .2s,box-shadow .2s}select{min-height:47px;font-size:13px;text-overflow:ellipsis;padding-right:28px}input[type=text]:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #3459e610}textarea{min-height:244px;resize:vertical;font-size:17px;line-height:1.95;padding:18px;background:#fff;border:0;border-radius:0}textarea:focus{outline:none;box-shadow:none}textarea::placeholder{color:#95a0b5;font-weight:400}.script-field{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:white;margin-bottom:20px;transition:border-color .2s}.script-field:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px #3459e60c}.script-label{display:flex;align-items:center;justify-content:space-between;padding:13px 17px 0}.script-label label{font-size:13px;font-weight:600}.script-label span{font-size:11px;color:var(--muted)}.script-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:#fafbfe;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.script-footer #count{font:600 12px "Plus Jakarta Sans",sans-serif;color:var(--ink)}.text-tools{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.text-tools span{margin-right:5px}.text-tool{padding:3px 7px;border:1px solid var(--line);border-radius:5px;font-size:11px;color:var(--muted);background:white}.text-tool:hover{color:var(--accent);border-color:#b5c3ff}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:0}.tab,.chip{font:inherit;font-size:12px;font-weight:500;padding:6px 11px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--muted);cursor:pointer;min-height:35px}.tab:hover,.chip:hover{border-color:#becbfb;color:var(--accent)}.tab[aria-pressed="true"],.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:#b8c6fa;color:var(--accent)}.chip[aria-pressed="true"]:before{content:"✓";margin-right:5px;font-family:sans-serif}.hint{font-size:12px;color:var(--muted)}#style-hint{font-size:11px;min-height:18px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}button.big{font-weight:500;padding:11px 20px;border-radius:10px;border:1px solid transparent;background:var(--btn);color:var(--btn-ink);min-height:46px;display:inline-flex;align-items:center;justify-content:center;gap:9px;box-shadow:0 4px 8px -5px #3459e66b}button.big:hover:not(:disabled){background:#2748cb}button.ghost,.ghost-link{font-size:13px;font-weight:500;padding:7px 11px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;text-decoration:none}button.ghost:hover,.ghost-link:hover{background:var(--bg);border-color:#c9d3e4}.generate-actions{border-top:1px solid var(--line);padding-top:20px;justify-content:space-between;gap:12px}.generate-actions>.hint{font-size:11px;display:flex;align-items:center;gap:6px}.generate-actions .icon{width:15px;height:15px}.generate-actions button .icon{width:18px;height:18px}.side-stack{display:grid;gap:18px}.voice-monitor{background:var(--navy);border:1px solid var(--navy);border-radius:var(--radius);color:white;padding:24px 23px 20px;overflow:hidden;position:relative}.monitor-header{display:flex;justify-content:space-between;align-items:center;color:#b8c9e7;font:500 9px "Plus Jakarta Sans",sans-serif;letter-spacing:1.5px}.monitor-header .icon{width:15px;height:15px}.monitor-title{font-size:12px;color:#aabedf;margin:27px 0 4px}.voice-monitor h2{font-size:25px;font-weight:500;line-height:1.5;margin:0;word-break:break-word}.monitor-wave{height:136px;position:relative;display:flex;align-items:center;justify-content:center;gap:3px;margin:10px -5px 4px}.monitor-wave:before{content:"";position:absolute;width:100%;height:1px;background:#ffffff14}.monitor-wave i{display:block;width:4px;border-radius:5px;height:var(--h);max-height:106px;background:#8ca9ff;opacity:calc(.35 + var(--h)/150%)}.monitor-wave i:nth-child(3n){background:#c4d3ff}.monitor-rule{display:flex;justify-content:space-between;color:#9eb4d6;font:9px "Plus Jakarta Sans",sans-serif;letter-spacing:2px;border-top:1px solid #ffffff18;padding-top:10px}.monitor-caption{font-size:12px;color:#bdcce5;margin:19px 0 9px}.voice-monitor audio{width:100%;height:34px;border-radius:20px}.monitor-note{font-size:11px;color:#c4d2e8;margin:0}.guide-card{padding:21px 22px;background:#eaf0fb;border:1px solid #e1e8f5;border-radius:16px}.guide-card .icon{color:var(--accent);width:22px;height:22px}.guide-card h3{font-size:14px;font-weight:600;margin:10px 0 8px}.guide-card p{color:#5f6f89;font-size:12px;margin:0;line-height:1.9}.guide-card button{margin-top:13px;font-size:12px;color:var(--accent);background:transparent;border:0;padding:0;display:flex;align-items:center;gap:6px}.guide-card button .icon{width:14px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:32px 0 15px}.section-head h2{font-size:20px;font-weight:600;letter-spacing:-.3px;margin:0}.section-head p{font-size:12px;margin:3px 0 0;color:var(--muted)}.section-head .count-label{font-size:12px;color:var(--muted);white-space:nowrap}.list{display:grid;gap:12px}.item{border:1px solid var(--line);border-radius:14px;background:white;padding:20px;min-width:0}.item-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.item b{font-size:15px;font-weight:600}.voice-identity{display:flex;align-items:center;gap:12px}.avatar-wave{display:flex;align-items:center;justify-content:center;gap:3px;width:44px;height:44px;background:var(--accent-soft);color:var(--accent);border-radius:13px;flex:none}.avatar-wave i{height:12px;width:3px;background:currentColor;border-radius:2px}.avatar-wave i:nth-child(2){height:24px}.avatar-wave i:nth-child(3){height:18px}.avatar-wave i:nth-child(4){height:9px}.voice-item:nth-child(2n) .avatar-wave{background:#f3eefa;color:#9470b9}.voice-item .actions{margin-top:20px}.voice-item .actions [data-use]{background:var(--accent);color:white;border-color:var(--accent)}.voice-item .actions a{font-size:12px}.voice-item .voice-meta{font-size:11px;color:var(--muted);margin:3px 0 0}.voice-item .technical{font-size:11px;margin-top:14px;color:var(--muted)}.technical summary{cursor:pointer}.mono{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--muted);word-break:break-all;margin-top:7px}.badge{font-size:10px;padding:2px 7px;border-radius:5px;background:var(--bg);color:var(--muted);margin-left:6px;font-weight:500}.badge.bad{color:var(--err);background:var(--err-soft)}.badge.mock{color:var(--warn);background:var(--warn-soft)}.history-list{grid-template-columns:repeat(2,minmax(0,1fr))}.history-item{display:grid;gap:12px}.history-item .item-top .hint{font-size:11px}.history-item .preview{font-size:13px;color:#69768c;line-height:1.8;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:46px}.history-item .actions{border-top:1px solid #eef1f7;padding-top:12px;gap:11px;flex-wrap:nowrap}.history-item audio{width:100%;min-width:0;height:34px}.download-link{display:inline-flex;padding:8px;border-radius:8px;background:var(--bg);color:var(--accent)}.download-link .icon{width:16px;height:16px}.duration{font:500 10px "Plus Jakarta Sans",sans-serif;background:var(--bg);padding:3px 7px;border-radius:5px;white-space:nowrap;color:var(--muted)}#voices{grid-template-columns:repeat(2,minmax(0,1fr))}.result{margin-top:12px}.result:empty,#speak-hint:empty{display:none}.result audio{width:100%;height:40px;margin-bottom:8px}.msg,.banner{font-size:13px;padding:12px 14px;border-radius:10px;background:var(--bg);margin:8px 0}.msg.ok{background:var(--ok-soft);color:var(--ok)}.msg.warn{background:var(--warn-soft);color:var(--warn)}.msg.err,.banner{background:var(--err-soft);color:var(--err)}.msg code,.banner code{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px}.msg details{margin-top:6px}.empty{padding:30px;border:1px dashed #ccd6e6;border-radius:14px;text-align:center;color:var(--muted);font-size:13px;grid-column:1/-1}.empty button{margin-top:12px}.sub{color:var(--muted);margin:0 0 20px;font-size:13px}.num{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--accent-soft);color:var(--accent);font:600 13px "Plus Jakarta Sans",sans-serif;border-radius:9px;flex:none}.card.done .num{background:var(--ok-soft);color:var(--ok)}.enroll-flow{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;max-width:880px}.enroll-flow .card{padding:28px}.notice{display:flex;gap:10px;font-size:12px;color:#60708b;background:#eaf0fb;border:1px solid #dfe7f5;border-radius:12px;padding:16px 18px;margin-bottom:22px;max-width:880px}.notice .icon{color:var(--accent);margin-top:2px}.notice b{color:var(--ink);font-weight:500}.notice p{margin:0}.passage{font-size:17px;line-height:1.95;padding:18px;border-radius:12px;background:var(--bg);margin-top:14px}.consent-text{font-size:20px;line-height:1.9;font-weight:500;padding:20px;border-radius:12px;background:var(--accent-soft);border-left:3px solid var(--accent);margin-top:14px}.tips{font-size:12px;color:var(--muted);padding-left:18px;margin:14px 0}.rec{display:grid;gap:11px;margin-top:20px}.rec-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}button.big.rec-btn{background:var(--rec);box-shadow:none}.rec-btn.on{animation:pulse 1.2s infinite}@keyframes pulse{50%{box-shadow:0 0 0 6px #c4435120}}.timer{font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted)}label.upload{font-size:12px;color:var(--accent);cursor:pointer;text-decoration:underline}label.upload:focus-within{outline:3px solid #8098ff;outline-offset:5px}label.upload input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}.meter,.prog{position:relative;height:8px;border-radius:5px;background:#e8edf5;overflow:hidden}.meter i{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--ok) 0 70%,var(--warn) 70% 88%,var(--rec) 88%);transition:width .06s linear}.prog{height:5px}.prog i{position:absolute;inset:0 auto 0 0;width:0;background:var(--accent)}.prog .zone{position:absolute;inset:0;border-left:2px solid var(--ok);border-right:2px solid var(--ok);background:#a7cfbb}.level-label,.metrics{font-size:11px;color:var(--muted)}.check{display:flex;gap:10px;font-size:13px;margin:5px 0 20px}.check input{margin-top:5px;width:17px;height:17px;flex:none;accent-color:var(--accent)}.spin{display:inline-block;width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .8s linear infinite;vertical-align:-2px;margin-right:5px}@keyframes spin{to{transform:rotate(360deg)}}.workspace-foot{display:flex;justify-content:space-between;gap:14px;padding-top:30px;font-size:10px;color:#7b889d}.workspace-foot span:last-child{font-family:"Plus Jakarta Sans",sans-serif}
+@media(min-width:1500px){.workspace{padding-left:54px;padding-right:54px}.studio-grid{grid-template-columns:minmax(0,1fr) 320px}.card.editor{padding:30px}.monitor-wave{height:155px}}
+@media(max-width:1160px){.app-shell{grid-template-columns:198px minmax(0,1fr)}.sidebar{padding:28px 14px 20px}.brand-name{font-size:14px}.brand-name small{font-size:9px;letter-spacing:1.3px}.workspace{padding:0 25px 35px}.studio-grid{grid-template-columns:minmax(0,1fr) 250px;gap:17px}.card{padding:21px}.voice-monitor{padding:22px 20px}.voice-monitor h2{font-size:22px}.guide-card{padding:20px}.breadcrumb{font-size:11px}.pill{font-size:10px}.history-list{grid-template-columns:1fr}.nav-btn{font-size:13px}}
+@media(max-width:1000px){.studio-grid{grid-template-columns:minmax(0,1fr)}.side-stack{grid-template-columns:1fr 1fr}.voice-monitor{display:grid;grid-template-columns:1fr 1fr;column-gap:15px;padding:20px}.monitor-header{grid-column:1/-1}.monitor-title{margin:17px 0 2px}.voice-monitor h2{grid-column:1;font-size:21px}.monitor-wave{grid-column:2;grid-row:2/5;height:88px;margin:0;gap:2px;align-self:center}.monitor-wave i{width:3px;max-height:72px}.monitor-rule{display:none}.monitor-caption{margin:16px 0 7px;grid-column:1/-1}.voice-monitor audio,.monitor-note{grid-column:1/-1}.guide-card{align-content:center}.page-head{padding:26px 0 22px}#voices{grid-template-columns:1fr}.topbar{height:72px}.breadcrumb .crumb-root{display:none}.breadcrumb .slash{display:none}}
+
+.shared-studio-notice{margin:20px 0 0;font-size:12px}.shared-studio-notice p{margin:0}
+.mobile-only{display:none}
+.draft-status{margin:8px 0 16px;font-size:11px;color:var(--muted);min-height:18px}
+.file-download{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 14px;border:1px solid var(--line);border-radius:9px;text-decoration:none;font-weight:500}
+.recording-tips{margin-top:12px;color:var(--muted);font-size:13px}
+.recording-tips summary{cursor:pointer;padding:8px 0}
+button,a,summary,label.upload{touch-action:manipulation}
+@media(max-width:900px){
+ html{scroll-padding-top:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+ body{font-size:16px}
+ .app-shell{display:block;min-height:100svh}
+ .sidebar{position:relative;height:auto;display:flex;gap:0;padding:max(12px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 12px max(16px,env(safe-area-inset-left));border-right:0;border-bottom:1px solid var(--line);min-height:70px}
+ .brand{width:max-content;min-height:44px;gap:10px}
+ .brand-mark{width:38px;height:40px;border-radius:11px}
+ .brand-name{font-size:18px}.brand-name small{font-size:9px;letter-spacing:1.8px;margin-top:2px}
+ .nav-label,.sidebar-note,.private-label{display:none}
+ .sidebar-footer{position:absolute;right:max(13px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));margin:0}
+ .nav{position:fixed;inset:auto 0 0;z-index:30;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:8px max(12px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));border-top:1px solid var(--line);background:#fff;box-shadow:0 -5px 20px #16233e08}
+ .nav-btn{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;min-height:58px;padding:8px 4px;border:0;border-radius:11px;font-size:12px;line-height:1.35;white-space:nowrap;text-align:center;width:100%}
+ .nav-btn .icon{display:block;width:21px;height:21px}.nav-btn .nav-count{display:none}
+ .nav-btn[aria-current="page"]{background:var(--accent-soft);border:0;color:var(--accent)}
+ .keyboard-open .nav{display:none}
+ .workspace{padding:0 max(16px,env(safe-area-inset-right)) calc(98px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));max-width:720px}
+ .topbar{height:auto;min-height:43px;justify-content:flex-start;padding:9px 0;border:0}
+ .breadcrumb{display:none}.pills{gap:7px}.pill{font-size:11px;padding:3px 8px}.pill.ok:before{width:5px;height:5px}
+ .page-head{padding:11px 0 19px;display:block}.page-head .eyebrow{display:none}
+ h1{font-size:26px;letter-spacing:-.5px;line-height:1.4}
+ .page-head p:not(.eyebrow){font-size:13px;margin:5px 0 0;max-width:none}
+ #new-voice-shortcut{display:none}
+ .studio-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+ .card,.card.editor{padding:20px 18px;border-radius:17px}
+ .section-caption{display:none}
+ .row2{grid-template-columns:minmax(0,1fr);gap:0}
+ .field{gap:8px;margin:0 0 18px}.field label,.field-label{font-size:14px;font-weight:500}
+ input[type=text],select,textarea{font-size:16px;line-height:1.55;min-width:0}
+ select,input[type=text]{min-height:50px;padding:11px 12px;border-radius:10px}
+ select{padding-right:26px;text-overflow:ellipsis}
+ .script-field{margin-bottom:0}.script-label{padding:13px 13px 0}.script-label label{font-size:14px}.script-label>span{display:none}
+ textarea{font-size:17px;line-height:1.85;min-height:174px;padding:14px 13px;resize:vertical}
+ .script-footer{display:flex;flex-wrap:wrap;gap:9px;padding:10px 12px;font-size:12px}
+ .text-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%}.text-tools>span{display:none}
+ button.text-tool{min-height:44px;padding:8px 4px;font-size:12px;line-height:1.5;border-radius:8px;white-space:nowrap}
+ .script-footer>span{margin-left:auto;font-size:12px}.script-footer #count{font-size:12px}
+ .draft-status{font-size:12px;margin:9px 0 20px}
+ .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ button.tab,button.chip{font-size:13px;line-height:1.5;min-height:46px;padding:10px 7px;border-radius:9px}
+ #styles .chip:last-child,#passage-tabs .tab:last-child{grid-column:1/-1}
+ #style-hint{font-size:12px;line-height:1.7}
+ .hint{font-size:12px}
+ .generate-actions{padding-top:17px;display:grid;grid-template-columns:1fr;gap:9px}
+ .generate-actions>.hint{display:none}
+ button.big{min-height:50px;font-size:16px}
+ .generate-actions button{width:100%;font-size:16px;min-height:54px}
+ #speak-hint:not(:empty){display:block;font-size:13px}
+ .side-stack{grid-template-columns:1fr;gap:0}.guide-card{display:none}
+ .voice-monitor{padding:20px;display:grid;grid-template-columns:minmax(0,1fr) 95px;column-gap:12px;border-radius:17px}
+ .monitor-header,.monitor-rule{display:none}.monitor-title{font-size:12px;margin:0 0 3px;grid-column:1;grid-row:1}
+ .voice-monitor h2{font-size:22px;grid-column:1;grid-row:2;line-height:1.5}
+ .monitor-wave{grid-column:2;grid-row:1/4;height:67px;gap:2px;margin:0;align-self:center}.monitor-wave i{width:3px;max-height:57px}
+ .monitor-caption{font-size:12px;grid-column:1/-1;margin:16px 0 8px}.voice-monitor audio{width:100%;height:44px;grid-column:1/-1}
+ .monitor-note{font-size:12px;grid-column:1/-1;line-height:1.7}
+ .section-head{margin:28px 0 14px;align-items:flex-start;gap:10px}.section-head h2{font-size:20px}.section-head p{font-size:12px;max-width:none}.section-head .count-label{font-size:12px;margin-top:5px}
+ .history-list,#voices{grid-template-columns:minmax(0,1fr)}
+ .item{padding:18px;border-radius:15px}.item-top{gap:10px}.item b{font-size:16px}.badge,.duration{font-size:11px}
+ .history-item .preview{font-size:14px;min-height:0;-webkit-line-clamp:3;line-height:1.8}
+ .history-item .actions{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding-top:14px}.history-item audio{width:100%;height:44px}
+ .download-link{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;font-size:14px;text-decoration:none;background:var(--accent-soft);border:1px solid #d8e1ff;border-radius:9px}
+ .download-link .icon{width:18px;height:18px}.mobile-only{display:inline}
+ .technical{font-size:13px!important;margin-top:4px!important}.technical summary{padding:11px 0;min-height:44px}.technical>div{overflow-wrap:anywhere}
+ .voice-item .actions{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:18px}.voice-item .actions button,.voice-item .actions a{display:flex;align-items:center;justify-content:center;min-height:46px;font-size:14px;padding:10px 12px;text-decoration:none;border-radius:9px;border:1px solid var(--line)}
+ .voice-item .voice-meta{font-size:12px}.voice-item .item-top>.badge{margin-left:56px}
+ .enroll-flow{gap:20px}.enroll-flow .card{padding:22px 18px}.enroll-flow h2{font-size:19px;margin-bottom:11px}.sub{font-size:14px;line-height:1.85;margin-bottom:18px}
+ .notice{font-size:13px;padding:16px;gap:9px;line-height:1.8;margin-bottom:18px}.notice .icon{width:18px;height:18px}
+ .passage{font-size:17px;line-height:1.9;padding:16px;margin-top:16px}.consent-text{font-size:19px;line-height:1.85;padding:18px;margin-top:16px}
+ .recording-tips{font-size:14px}.recording-tips summary{min-height:44px;display:list-item;padding:11px 0}.tips{font-size:13px;line-height:1.85;margin:2px 0 12px}
+ .rec{margin-top:17px;gap:12px}.rec-row{display:grid;grid-template-columns:1fr;gap:9px}.rec-row button{width:100%}.timer{font-size:14px;text-align:center}
+ label.upload{position:relative;display:flex;align-items:center;justify-content:center;min-height:48px;width:100%;padding:10px 12px;border:1px dashed #adbee2;border-radius:9px;background:var(--accent-soft);font-size:14px;text-decoration:none;text-align:center}
+ .level-label,.metrics{font-size:12px;line-height:1.75;overflow-wrap:anywhere}.meter{height:12px}.prog{height:7px}
+ .check{font-size:14px;gap:12px;line-height:1.85;padding:10px 0}.check input{width:22px;height:22px;margin-top:3px}
+ #step-create .actions{display:grid;grid-template-columns:1fr}.result audio{height:44px;width:100%}.file-download{flex:1 1 130px;font-size:14px;min-height:46px}
+ .msg,.banner{font-size:14px;line-height:1.8;overflow-wrap:anywhere}.workspace-foot{font-size:11px;line-height:1.7;display:block;padding-top:26px}.workspace-foot span{display:block}.workspace-foot span:last-child{margin-top:4px;font-size:10px}
+}
+@media(max-width:360px){
+ .workspace{padding-left:12px;padding-right:12px}.card,.card.editor,.enroll-flow .card{padding-left:15px;padding-right:15px}
+ .brand-name{font-size:16px}.brand-mark{width:35px;height:38px}.brand-name small{font-size:8px}.nav{gap:3px;padding-left:8px;padding-right:8px}.nav-btn{font-size:11px}
+ h1{font-size:24px}.page-head p:not(.eyebrow){font-size:12px}.pill{font-size:10px}
+ button.text-tool{font-size:11px}.voice-monitor{grid-template-columns:minmax(0,1fr) 72px}.voice-monitor h2{font-size:20px}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 10v4m4-8v12m5-16v20m5-16v12m4-8v4"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 8 10 8 10s8-5 8-10V6l-8-3Z"/><path d="m8.5 11.5 2.3 2.3 4.7-4.7"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-script" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4L12 3Z"/></symbol></svg>
+<a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+<div class="app-shell">
+<aside class="sidebar" aria-label="เมนูสตูดิโอ">
+ <a class="brand" href="#studio" aria-label="Doctor Top CPD หน้าหลัก"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-name">Doctor Top CPD<small>Voice Studio</small></span></a>
+ <div><p class="nav-label">Our voice studio</p><nav class="nav" aria-label="หน้าหลัก">
+ <button class="nav-btn" data-view="studio" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg><span>สร้างเสียงพูด</span></button>
+ <button class="nav-btn" data-view="library"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><span>คลังเสียง</span><span class="nav-count" id="voice-count">—</span></button>
+ <button class="nav-btn" data-view="enroll"><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg><span>เพิ่มเสียงใหม่</span></button>
+ </nav></div>
+ <div class="sidebar-footer"><div class="private-label"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>สตูดิโอที่ใช้ร่วมกัน</span></div><p class="sidebar-note">DOCTOR TOP CPD</p></div>
+</aside>
+<main class="workspace" id="main" tabindex="-1">
+ <header class="topbar"><div class="breadcrumb"><span class="crumb-root">Doctor Top CPD</span><span class="slash">/</span><strong id="current-page">สร้างเสียงพูด</strong></div><div class="pills" id="pills" aria-live="polite"><span class="pill">กำลังเชื่อมต่อ…</span></div></header>
+ <div id="banner" role="alert"></div>
+ <div class="notice shared-studio-notice"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><p><b>สตูดิโอร่วม เปิดใช้ได้เลยโดยไม่ต้องใส่รหัส</b><br>ผู้ที่มีลิงก์นี้สามารถดู ใช้ และดาวน์โหลดเสียงกับผลงานที่บันทึกไว้ได้</p></div>
+ <div class="page-head"><div><p class="eyebrow" id="page-eyebrow">Text to speech</p><h1 id="page-title" tabindex="-1">ทุกเรื่องราว ในเสียงของคุณ</h1><p id="page-description">ใส่ข้อความ เลือกน้ำเสียง แล้วให้เรื่องราวของคุณมีชีวิต</p></div><button class="ghost" data-view="enroll" id="new-voice-shortcut"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>เพิ่มเสียงใหม่</button></div>
+ <div class="workspace-view" id="view-studio">
+ <div class="studio-grid">
+  <section class="card editor" id="step-speak" aria-labelledby="editor-title">
+   <div class="section-caption"><h2 id="editor-title"><svg class="icon" aria-hidden="true"><use href="#i-script"/></svg>สร้างเสียงพูด</h2><span class="hint">เขียน · เลือกเสียง · กดสร้าง</span></div>
+   <div class="row2"><div class="field"><label for="svoice">เสียงที่ใช้</label><select id="svoice"><option>กำลังโหลดเสียง…</option></select></div><div class="field"><label for="smodel">โมเดลเสียง</label><select id="smodel"><option>กำลังโหลด…</option></select></div></div>
+   <div class="script-field"><div class="script-label"><label for="text">บทพูดของคุณ</label><span>อ่านตามข้อความที่เขียน</span></div><textarea id="text" enterkeyhint="enter" placeholder="พิมพ์หรือวางข้อความที่นี่…&#10;&#10;เช่น กาลครั้งหนึ่ง นานมาแล้ว" aria-describedby="script-help"></textarea><div class="script-footer"><div class="text-tools"><span>เพิ่มจังหวะ</span><button class="text-tool" data-insert="&lt;short pause&gt;" title="เพิ่มจังหวะหยุดสั้น">+ หยุดสั้น</button><button class="text-tool" data-insert="&lt;long pause&gt;" title="เพิ่มจังหวะหยุดยาว">+ หยุดยาว</button><button class="text-tool" data-insert="&lt;laugh&gt;" title="เพิ่มเสียงหัวเราะ">+ หัวเราะ</button></div><span><span id="count">0</span> ตัวอักษร</span></div></div>
+   <p class="draft-status" id="draft-status" aria-live="polite"></p><div class="field"><label>สไตล์การพูด</label><div class="tabs" id="styles" aria-label="สไตล์การพูด"></div><input type="text" id="custom-style" enterkeyhint="done" aria-label="สไตล์การพูดที่กำหนดเอง" placeholder="เช่น อบอุ่น เล่าช้า ๆ เหมือนเล่านิทานก่อนนอน" hidden><span class="hint" id="style-hint"></span></div>
+   <div class="actions generate-actions"><span class="hint" id="script-help"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>ผลงานบันทึกไว้ในคลังร่วม</span><button class="big" id="speak-btn" disabled><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>สร้างเสียงพูด</button><span class="hint" id="speak-hint" role="status"></span></div>
+   <div class="result" id="speak-result" aria-live="polite"></div>
+  </section>
+  <aside class="side-stack" aria-label="เสียงที่เลือกและคำแนะนำ">
+   <section class="voice-monitor"><div class="monitor-header"><span>YOUR VOICE, IN FOCUS</span><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg></div><p class="monitor-title">เสียงที่เลือก</p><h2 id="selected-voice-name">กำลังโหลดเสียง…</h2><div class="monitor-wave" aria-hidden="true"><i style="--h:8%;--n:0"></i><i style="--h:12%;--n:1"></i><i style="--h:7%;--n:2"></i><i style="--h:20%;--n:3"></i><i style="--h:32%;--n:4"></i><i style="--h:20%;--n:5"></i><i style="--h:44%;--n:6"></i><i style="--h:26%;--n:7"></i><i style="--h:18%;--n:8"></i><i style="--h:36%;--n:9"></i><i style="--h:62%;--n:10"></i><i style="--h:84%;--n:11"></i><i style="--h:56%;--n:12"></i><i style="--h:38%;--n:13"></i><i style="--h:68%;--n:14"></i><i style="--h:94%;--n:15"></i><i style="--h:76%;--n:16"></i><i style="--h:50%;--n:17"></i><i style="--h:100%;--n:18"></i><i style="--h:64%;--n:19"></i><i style="--h:84%;--n:20"></i><i style="--h:52%;--n:21"></i><i style="--h:30%;--n:22"></i><i style="--h:48%;--n:23"></i><i style="--h:72%;--n:24"></i><i style="--h:46%;--n:25"></i><i style="--h:26%;--n:26"></i><i style="--h:58%;--n:27"></i><i style="--h:36%;--n:28"></i><i style="--h:18%;--n:29"></i><i style="--h:30%;--n:30"></i><i style="--h:42%;--n:31"></i><i style="--h:24%;--n:32"></i><i style="--h:14%;--n:33"></i><i style="--h:22%;--n:34"></i><i style="--h:10%;--n:35"></i><i style="--h:6%;--n:36"></i></div><div class="monitor-rule" aria-hidden="true"><span>VOICE</span><span>• • • • •</span><span>STUDIO</span></div><p class="monitor-caption" id="monitor-caption">ฟังเสียงต้นฉบับ</p><audio playsinline id="voice-preview" aria-label="ฟังเสียงต้นฉบับที่เลือก" controls preload="metadata" hidden></audio><p class="monitor-note" id="monitor-note">เลือกเสียงจากรายการเพื่อเริ่มต้น</p></section>
+   <section class="guide-card"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><h3>ให้เสียงเล่าในแบบของคุณ</h3><p>เลือก “เล่านิทาน” สำหรับเรื่องเล่าอบอุ่น หรือ “กำหนดเอง” เพื่อบอกอารมณ์และจังหวะที่อยากได้</p><button id="custom-style-shortcut">กำหนดสไตล์ของฉัน<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></section>
+  </aside>
+ </div>
+ <section id="history-section" aria-labelledby="history-title"><div class="section-head"><div><h2 id="history-title">ผลงานเสียงในสตูดิโอ</h2><p id="history-storage-hint">ฟังและดาวน์โหลดผลงานที่ทุกคนสร้างไว้ในสตูดิโอนี้</p></div><span class="count-label" id="history-count"></span></div><div class="list history-list" id="history"><p class="empty">กำลังโหลดผลงานเสียง…</p></div></section>
+ </div>
+ <div class="workspace-view" id="view-library" hidden><div class="result" id="library-result" role="status"></div><div class="list" id="voices"><p class="empty">กำลังโหลดคลังเสียง…</p></div></div>
+ <div class="workspace-view" id="view-enroll" hidden><div class="notice"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p><b>ใช้เสียงของคุณ หรือเสียงที่เจ้าของยินยอม</b><br>เจ้าของเสียงต้องอัดประโยคยินยอมด้วยตัวเอง Google จะตรวจว่าเป็นคนเดียวกับเสียงตัวอย่าง และฝังลายน้ำ SynthID ในเสียงที่สร้าง</p></div><div class="enroll-flow">  <!-- STEP 1 -->
+  <section class="card" id="step-source">
+    <h2><span class="num">1</span>อัดเสียงตัวอย่าง</h2>
+    <p class="sub">พูด 20–30 วินาที (อย่างน้อย 10 วิ) เป็นธรรมชาติเหมือนเล่าให้คนตรงหน้าฟัง ไม่ต้องอ่านตรงเป๊ะ</p>
+    <div class="tabs" id="passage-tabs"></div>
+    <div class="passage" id="passage"></div>
+    <details class="recording-tips"><summary>เตรียมตัวก่อนอัดเสียง</summary><ul class="tips">
+      <li>ห้องเงียบ ปิดพัดลม/แอร์ ไม่มีเพลง ไม่มีคนอื่นพูด</li>
+      <li>ใช้ไมค์ตัวเดียวกับขั้นที่ 2 และนั่งที่เดิม ระยะปากถึงไมค์ ~1 คืบ</li>
+      <li>น้ำเสียงที่อัด = น้ำเสียงที่จะได้ ถ้าอยากได้เสียงเล่านิทานอบอุ่น ให้อัดแบบนั้น</li>
+    </ul></details>
+    <p class="hint">ระหว่างอัด ให้เปิดหน้านี้ค้างไว้จนกดหยุด</p>
+    <div class="rec" data-kind="source">
+      <div class="rec-row">
+        <button class="big rec-btn" data-act="toggle" disabled>● เริ่มอัด</button>
+        <span class="timer" data-el="timer">0.0 / 30 วิ</span>
+        <label class="upload">หรืออัปโหลดไฟล์เสียงของคุณเอง<input type="file" accept="audio/*,video/mp4" data-el="file" disabled></label>
+      </div>
+      <div class="prog" data-el="prog"><span class="zone" style="left:66.6%;right:0"></span><i></i></div>
+      <div class="meter"><i data-el="meter"></i></div>
+      <div class="level-label" data-el="level">ระดับเสียง — กดเริ่มอัดแล้วลองพูด แถบควรอยู่โซนเขียว</div>
+      <div class="result" data-el="result"></div>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="card" id="step-consent">
+    <h2><span class="num">2</span>อัดประโยคยินยอม</h2>
+    <p class="sub">อ่านประโยคนี้ให้ครบ <b>ตรงตัวทุกคำ</b> ด้วยเสียงเดียวกัน ไมค์เดียวกัน ห้องเดียวกับขั้นที่ 1 (ประโยคภาษาไทยเป็นประโยคทางการของ Google — ใช้คำว่า “ฉัน” ตามต้นฉบับ ไม่ต้องเปลี่ยนเป็น “ผม”)</p>
+    <div class="tabs" id="consent-tabs">
+      <button class="tab" data-lang="th-TH" aria-pressed="true">ภาษาไทย</button>
+      <button class="tab" data-lang="en-US" aria-pressed="false">English</button>
+    </div>
+    <div class="consent-text" id="consent-text"></div>
+    <p class="hint" id="consent-hint"></p>
+    <div class="rec" data-kind="consent">
+      <div class="rec-row">
+        <button class="big rec-btn" data-act="toggle" disabled>● เริ่มอัด</button>
+        <span class="timer" data-el="timer">0.0 / 20 วิ</span>
+      </div>
+      <div class="meter"><i data-el="meter"></i></div>
+      <div class="level-label" data-el="level">ประโยคยินยอมต้องอัดสดจากไมค์ (ไม่มีปุ่มอัปโหลด)</div>
+      <div class="result" data-el="result"></div>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="card" id="step-create">
+    <h2><span class="num">3</span>บันทึกเสียงของคุณ</h2>
+    <p class="sub" id="create-storage-hint">ส่ง 2 คลิปให้ Google สร้างเสียงโคลน เก็บไว้ในโปรเจกต์ 1 ปี (นับใหม่ทุกครั้งที่ใช้) และเก็บไฟล์ต้นฉบับไว้ในเครื่องเผื่อสร้างใหม่</p>
+    <div class="row2">
+      <div class="field"><label for="vname">ชื่อเสียง</label><input type="text" id="vname" enterkeyhint="done" value="เสียงของฉัน" maxlength="60"></div>
+      <div class="field"><label for="vmodel">โมเดล</label><select id="vmodel"></select></div>
+    </div>
+    <label class="check"><input type="checkbox" id="ack">
+      <span>ฉันยืนยันว่าเจ้าของเสียงเป็นผู้ใหญ่ และนี่คือเสียงของฉันเอง (หรือเจ้าของเสียงเป็นคนอัดประโยคยินยอมด้วยตัวเอง) และยอมรับให้ Google ใช้สร้างเสียงสังเคราะห์ โดยเสียงที่บันทึกและผลงานจะใช้ร่วมกับผู้ที่มีลิงก์สตูดิโอนี้</span></label>
+    <div class="actions">
+      <button class="big" id="create-btn" disabled>บันทึกเสียงใหม่</button>
+      <span class="hint" id="create-hint"></span>
+    </div>
+    <div class="result" id="create-result" aria-live="polite"></div>
+  </section>
+
+</div></div>
+ <footer class="workspace-foot"><span>เสียงของคุณ · เรื่องราวของคุณ · พื้นที่สร้างสรรค์ร่วมกัน</span><span>Doctor Top CPD</span></footer>
+</main></div>
+<script>
+const PASSAGES = [
+  {name:"นิทาน", text:"กาลครั้งหนึ่ง ในหมู่บ้านเล็ก ๆ ริมแม่น้ำ มีเด็กชายคนหนึ่งชื่อต้นกล้า ทุกเช้าเขาจะตื่นมาฟังเสียงนกร้อง แล้ววิ่งไปช่วยคุณยายรดน้ำต้นไม้หลังบ้าน วันหนึ่ง เขาเจอเมล็ดพันธุ์สีทองตกอยู่ข้างทาง ต้นกล้าไม่รู้ว่ามันคืออะไร แต่ก็ตัดสินใจเก็บมันไว้ แล้วปลูกลงดินอย่างตั้งใจ รดน้ำทุกวันไม่เคยขาด เขาไม่รู้เลยว่า เมล็ดเล็ก ๆ เมล็ดนี้ จะเปลี่ยนชีวิตของคนทั้งหมู่บ้านไปตลอดกาล"},
+  {name:"เล่าเรื่องสบาย ๆ", text:"เมื่อเช้านี้ผมแวะร้านกาแฟเจ้าประจำ เจ้าของร้านยิ้มทักเหมือนทุกวัน แล้วถามว่าวันนี้เอาเหมือนเดิมไหม ผมนั่งมองคนเดินผ่านไปมา บางคนรีบ บางคนเดินช้า ๆ ไม่รีบร้อน แล้วก็คิดขึ้นมาว่า ชีวิตเราก็เหมือนกัน บางวันต้องวิ่ง บางวันก็ควรหยุดพักบ้าง ไม่มีใครเก่งได้ทุกวัน แต่ถ้าเราค่อย ๆ ทำไปทีละนิด สักวันหนึ่งเราจะหันกลับมามอง แล้วยิ้มให้ตัวเองได้"},
+  {name:"เล่าประสบการณ์", text:"วันนี้อยากเล่าเรื่องง่าย ๆ ที่หลายคนมองข้าม ตอนเริ่มทำธุรกิจใหม่ ๆ ผมคิดว่าต้องทำทุกอย่างเองให้ได้ ทั้งขายของ ตอบแชท ทำบัญชี จนแทบไม่ได้นอน พอได้ลองใช้เครื่องมือช่วยงาน ชีวิตก็เปลี่ยนไปเยอะมาก งานที่เคยใช้เวลาครึ่งวัน เหลือแค่ไม่กี่นาที เวลาที่เหลือ ผมเอาไปคิดเรื่องที่สำคัญกว่า คือทำยังไงให้ลูกค้ามีความสุข และกลับมาหาเราอีกครั้ง"},
+];
+const PREBUILT = ["Kore","Puck","Charon","Achird","Sulafat","Vindemiatrix"];
+let ST = null, VOICES = [], consentLang = "th-TH", styleKey = "story";
+
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fileUrl = (rel, dl) => "/files/" + rel.split("/").map(encodeURIComponent).join("/") + (dl ? "?download=1" : "?t=" + Date.now());
+const isCloud = () => ST?.cloud ?? !["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
+
+async function api(path, opts = {}) {
+  let r, j;
+  try { r = await fetch(path, opts); } catch (e) { throw {error: isCloud() ? "ติดต่อสตูดิโอไม่ได้ — ตรวจการเชื่อมต่ออินเทอร์เน็ต แล้วลองใหม่" : "ติดต่อเซิร์ฟเวอร์ไม่ได้ — run.sh ยังเปิดอยู่ไหม?"}; }
+  try { j = await r.json(); } catch (e) { j = {ok: false, error: "เซิร์ฟเวอร์ตอบกลับผิดรูปแบบ (HTTP " + r.status + ")"}; }
+  if (!r.ok || j.ok === false) throw j;
+  return j;
+}
+function errHtml(e) {
+  return `<div class="msg err">${esc(e.error || e.message || String(e))}${e.detail ? `<details><summary>รายละเอียด</summary><code>${esc(e.detail)}</code></details>` : ""}</div>`;
+}
+function fmtDate(iso) {
+  if (!iso) return "-";
+  const d = new Date(iso);
+  return d.toLocaleString("th-TH", {dateStyle: "medium", timeStyle: "short"});
+}
+function daysLeft(iso) {
+  if (!iso) return "";
+  const n = Math.floor((new Date(iso) - Date.now()) / 86400000);
+  return n < 0 ? "หมดอายุแล้ว" : `เหลือ ${n} วัน`;
+}
+
+/* ---------------- workspace navigation ---------------- */
+const VIEW_COPY = {
+  studio: ["สร้างเสียงพูด", "Text to speech", "ทุกเรื่องราว ในเสียงของคุณ", "ใส่ข้อความ เลือกน้ำเสียง แล้วให้เรื่องราวของคุณมีชีวิต"],
+  library: ["คลังเสียงร่วม", "Shared voice library", "คลังเสียงของสตูดิโอ", "เลือกเสียงที่ทุกคนบันทึกไว้ ฟังต้นฉบับ แล้วนำไปสร้างเสียงพูด"],
+  enroll: ["เพิ่มเสียงใหม่", "Create a voice", "เริ่มจากเสียงของคุณ", "อัดเสียงตัวอย่างและประโยคยินยอม แล้วบันทึกไว้ใช้ในสตูดิโอ"]
+};
+function showView(view, focus = true) {
+  if (!VIEW_COPY[view]) view = "studio";
+  const activeRecorder = document.querySelector(".rec-btn.on, .rec[data-starting] [data-act=toggle]");
+  if (view !== "enroll" && activeRecorder) {
+    $("#banner").innerHTML = `<div class="msg warn" id="recording-navigation-warning">กำลังเตรียมหรืออัดเสียงอยู่ กรุณารอแล้วกดหยุดก่อนเปลี่ยนหน้า</div>`;
+    activeRecorder.focus();
+    return;
+  }
+  $("#recording-navigation-warning")?.remove();
+  document.querySelectorAll(".workspace-view").forEach(el => {
+    const hide = el.id !== "view-" + view;
+    if (hide && !el.hidden) el.querySelectorAll("audio").forEach(audio => audio.pause());
+    el.hidden = hide;
+  });
+  document.querySelectorAll(".nav-btn[data-view]").forEach(el => {
+    if (el.dataset.view === view) el.setAttribute("aria-current", "page");
+    else el.removeAttribute("aria-current");
+  });
+  const [label, eyebrow, title, description] = VIEW_COPY[view];
+  $("#current-page").textContent = label;
+  $("#page-eyebrow").textContent = eyebrow;
+  document.body.dataset.view = view;
+  $("#page-title").textContent = matchMedia("(max-width:900px)").matches ? label : title;
+  $("#page-description").textContent = matchMedia("(max-width:900px)").matches && view === "studio" ? "เลือกเสียง แล้วพิมพ์ข้อความที่อยากให้พูด" : description;
+  $("#new-voice-shortcut").hidden = view === "enroll";
+  history.replaceState(null, "", "#" + view);
+  if (focus) { $("#page-title").focus({preventScroll:true}); window.scrollTo({top:0, behavior:"instant"}); }
+}
+document.addEventListener("click", event => {
+  const target = event.target.closest("button[data-view]");
+  if (target) showView(target.dataset.view);
+});
+$(".brand").addEventListener("click", event => { event.preventDefault(); showView("studio"); });
+function renderSelectedVoice() {
+  const select = $("#svoice"), voice = VOICES.find(v => v.id === select.value);
+  $("#selected-voice-name").textContent = voice?.display_name || select.selectedOptions[0]?.textContent || "เลือกเสียงของคุณ";
+  const audio = $("#voice-preview");
+  if (voice?.source_wav) {
+    const path = "/files/" + voice.source_wav.split("/").map(encodeURIComponent).join("/");
+    if (audio.getAttribute("src") !== path) { audio.pause(); audio.src = path; }
+    audio.hidden = false; $("#monitor-note").hidden = true;
+    $("#monitor-caption").textContent = "ฟังเสียงต้นฉบับ";
+  } else {
+    audio.pause(); audio.removeAttribute("src"); audio.load(); audio.hidden = true;
+    $("#monitor-caption").textContent = voice ? "เสียงโคลนของคุณ" : "เสียงสำเร็จรูปจาก Google";
+    $("#monitor-note").hidden = false;
+    $("#monitor-note").textContent = "ใส่บทพูดแล้วกดสร้างเสียงพูดเพื่อฟังเสียงนี้";
+  }
+  document.querySelectorAll("[data-use]").forEach(el => el.setAttribute("aria-pressed", el.dataset.use === select.value));
+}
+$("#svoice").addEventListener("change", () => { renderSelectedVoice(); saveDraft(); });
+let speaking = false;
+function updateSpeakButton() { $("#speak-btn").disabled = !ST || (!ST.has_key && !ST.mock) || !$("#text").value.trim() || !$("#svoice").querySelector("optgroup") || speaking; }
+function updateTextCount() { $("#count").textContent = $("#text").value.length.toLocaleString(); updateSpeakButton(); saveDraft(); }
+document.querySelectorAll("[data-insert]").forEach(button => button.addEventListener("click", () => {
+  const input = $("#text");
+  input.setRangeText(button.dataset.insert + " ", input.selectionStart, input.selectionEnd, "end");
+  input.focus(); updateTextCount();
+}));
+$("#custom-style-shortcut").addEventListener("click", () => { styleKey = "custom"; renderStyles(); saveDraft(); $("#custom-style").focus(); });
+showView(location.hash.slice(1), false);
+
+/* ---------------- mobile workspace / private tab draft ---------------- */
+const DRAFT_KEY = "doctor-top-cpd.voice-studio.draft.v1";
+let draftReady = false;
+function saveDraft() {
+  if (!draftReady) return;
+  try {
+    const draft = {text:$("#text").value, style:styleKey, custom:$("#custom-style").value, voice:$("#svoice").value, model:$("#smodel").value};
+    if (draft.text || draft.custom) sessionStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+    else sessionStorage.removeItem(DRAFT_KEY);
+    $("#draft-status").textContent = draft.text || draft.custom ? "เก็บฉบับร่างไว้ในแท็บนี้แล้ว" : "";
+  } catch (_) { $("#draft-status").textContent = "เบราว์เซอร์ไม่อนุญาตให้เก็บร่าง กรุณาคัดลอกข้อความก่อนปิดหน้านี้"; }
+}
+function restoreDraft() {
+  try {
+    const draft = JSON.parse(sessionStorage.getItem(DRAFT_KEY) || "null");
+    if (draft && typeof draft === "object" && !$("#text").value) {
+      if (typeof draft.text === "string") $("#text").value = draft.text;
+      if (typeof draft.custom === "string") $("#custom-style").value = draft.custom;
+      if (draft.style === "custom" || Object.hasOwn(ST.styles, draft.style)) styleKey = draft.style;
+      for (const [id,key] of [["#svoice","voice"],["#smodel","model"]]) {
+        if (typeof draft[key] === "string" && [...$(id).options].some(o => o.value === draft[key])) $(id).value = draft[key];
+      }
+      renderStyles(); renderSelectedVoice();
+    }
+  } catch (_) { /* A blocked or malformed draft must never block the studio. */ }
+  draftReady = true; updateTextCount();
+}
+$("#custom-style").addEventListener("input", saveDraft);
+$("#smodel").addEventListener("change", saveDraft);
+window.addEventListener("pagehide", saveDraft);
+const mobileLayout = matchMedia("(max-width:900px)");
+mobileLayout.addEventListener("change", () => {
+  const view = document.body.dataset.view || "studio", [label,,title,description] = VIEW_COPY[view];
+  $("#page-title").textContent = mobileLayout.matches ? label : title;
+  $("#page-description").textContent = mobileLayout.matches && view === "studio" ? "เลือกเสียง แล้วพิมพ์ข้อความที่อยากให้พูด" : description;
+});
+let fullViewportHeight = innerHeight, viewportWidth = innerWidth;
+function updateKeyboardLayout() {
+  const focused = document.activeElement?.matches("textarea,input:not([type=checkbox]):not([type=file])");
+  if (Math.abs(innerWidth - viewportWidth) > 50) { fullViewportHeight = innerHeight; viewportWidth = innerWidth; }
+  if (!focused) fullViewportHeight = Math.max(fullViewportHeight, innerHeight);
+  const visibleHeight = window.visualViewport?.height || innerHeight;
+  document.body.classList.toggle("keyboard-open", mobileLayout.matches && focused && fullViewportHeight - visibleHeight > 120);
+}
+window.visualViewport?.addEventListener("resize", updateKeyboardLayout);
+window.addEventListener("resize", updateKeyboardLayout);
+document.addEventListener("focusin", updateKeyboardLayout);
+document.addEventListener("focusout", () => requestAnimationFrame(updateKeyboardLayout));
+
+/* ---------------- status ---------------- */
+function renderStatus() {
+  const p = [];
+  if (ST.mock) p.push(`<span class="pill mock">โหมดจำลอง (MOCK) — ไม่เรียก API จริง</span>`);
+  if (ST.cloud) {
+    p.push(ST.has_key ? `<span class="pill ok">Gemini พร้อมใช้งาน</span>` : `<span class="pill bad">ยังเชื่อมต่อ Gemini ไม่ครบ</span>`);
+    p.push(`<span class="pill">คลังเสียงร่วม</span>`);
+    $("#history-storage-hint").textContent = "ฟังและดาวน์โหลดผลงานที่ทุกคนสร้างไว้ในสตูดิโอนี้";
+    $("#create-storage-hint").textContent = "ส่ง 2 คลิปให้ Google สร้างเสียงโคลน เก็บไว้ในโปรเจกต์ 1 ปี (นับใหม่ทุกครั้งที่ใช้) ไฟล์ต้นฉบับและเสียงที่บันทึกจะอยู่ในคลังร่วมของสตูดิโอนี้";
+  } else {
+    p.push(ST.has_key ? `<span class="pill ok">คีย์ Gemini พร้อม</span>` : `<span class="pill ${ST.mock ? "" : "bad"}">ยังไม่มี GEMINI_API_KEY</span>`);
+    p.push(ST.sdk ? `<span class="pill ok">google-genai</span>` : `<span class="pill ${ST.mock ? "" : "bad"}">ยังไม่ติดตั้ง google-genai</span>`);
+    p.push(ST.ffmpeg ? `<span class="pill ok">ffmpeg</span>` : `<span class="pill bad">ไม่พบ ffmpeg</span>`);
+  }
+  $("#pills").innerHTML = p.join("");
+  $("#banner").innerHTML = (!ST.mock && !ST.has_key)
+    ? ST.cloud ? `<div class="banner">สตูดิโอยังเชื่อมต่อ Gemini ไม่ครบ กรุณาติดต่อผู้ดูแลสตูดิโอ</div>`
+      : `<div class="banner">ยังไม่มีคีย์ — เปิดไฟล์ <code>${esc(ST.env_file)}</code> แล้วใส่บรรทัด <code>GEMINI_API_KEY=คีย์ของคุณ</code> (ขอคีย์ที่ Google AI Studio → Get API key) จากนั้นรีเฟรชหน้านี้ ไม่ต้องรีสตาร์ต</div>` : "";
+  const opts = Object.entries(ST.models).map(([k, v]) => `<option value="${esc(k)}">${esc(v)}</option>`).join("");
+  $("#vmodel").innerHTML = opts; $("#smodel").innerHTML = opts;
+  $("#vmodel").value = ST.default_model; $("#smodel").value = ST.default_model;
+  renderConsent();
+  renderStyles();
+  for (const kind of ["source", "consent"]) if (ST.pending[kind]) renderClip(kind, ST.pending[kind]);
+  updateCreateBtn();
+}
+
+/* ---------------- passages / consent ---------------- */
+function renderPassages(i = 0) {
+  $("#passage-tabs").innerHTML = PASSAGES.map((p, j) => `<button class="tab" data-i="${j}" aria-pressed="${j === i}">${esc(p.name)}</button>`).join("");
+  $("#passage").textContent = PASSAGES[i].text;
+}
+$("#passage-tabs").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if (b) renderPassages(+b.dataset.i); });
+function renderConsent() {
+  if (!ST) return;
+  $("#consent-text").textContent = ST.consent_sentences[consentLang];
+  $("#consent-hint").textContent = consentLang === "th-TH"
+    ? "ภาษาไทยเป็นภาษาที่ Google รองรับอย่างเป็นทางการ ถ้าสร้างไม่ผ่านซ้ำ ๆ ลองสลับเป็น English"
+    : "ใช้ประโยคภาษาอังกฤษแทนได้ อ่านให้ชัดทุกคำ (ความหมาย: ฉันเป็นเจ้าของเสียงนี้และยินยอมให้ Google ใช้เสียงนี้สร้างแบบจำลองเสียงสังเคราะห์)";
+  document.querySelectorAll("#consent-tabs .tab").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === consentLang));
+}
+$("#consent-tabs").addEventListener("click", e => { const b = e.target.closest("[data-lang]"); if (b) { consentLang = b.dataset.lang; renderConsent(); } });
+
+/* ---------------- recorder ---------------- */
+let recordingOwner = null;
+const recorders = [];
+function syncRecorderControls() {
+  recorders.forEach(rec => {
+    const blocked = !!recordingOwner && recordingOwner !== rec;
+    rec.btn.disabled = blocked || rec.phase === "stopping" || rec.phase === "uploading";
+    const file = rec.el("file");
+    if (file) file.disabled = !!recordingOwner || !!rec.root.dataset.uploading;
+  });
+}
+function stopMicTracks(stream) {
+  stream?.getTracks().forEach(track => { try { track.stop(); } catch (_) {} });
+}
+async function getMic() {
+  if (!navigator.mediaDevices?.getUserMedia) throw {error: "เบราว์เซอร์นี้อัดเสียงไม่ได้ — เปิดสตูดิโอด้วย Safari หรือ Chrome ผ่านลิงก์ HTTPS"};
+  try {
+    return await navigator.mediaDevices.getUserMedia({audio: {channelCount: 1, echoCancellation: false, noiseSuppression: false, autoGainControl: false}});
+  } catch (e) {
+    throw {error: e.name === "NotAllowedError" ? "ยังไม่ได้รับอนุญาตใช้ไมค์ — อนุญาตไมโครโฟนใน Safari หรือ Chrome แล้วลองใหม่" : "เปิดไมโครโฟนไม่ได้ — ปิดแอปที่ใช้ไมค์อยู่ แล้วลองอีกครั้ง", detail: String(e)};
+  }
+}
+function pickMime() {
+  if (!window.MediaRecorder || !MediaRecorder.isTypeSupported) return "";
+  for (const mime of ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus"]) {
+    try { if (MediaRecorder.isTypeSupported(mime)) return mime; } catch (_) {}
+  }
+  return "";
+}
+class Recorder {
+  constructor(root) {
+    this.root = root; this.kind = root.dataset.kind; this.phase = "idle"; this.run = null;
+    this.max = this.kind === "source" ? ST.limits.source_max : ST.limits.consent_max;
+    this.el = name => $(`[data-el="${name}"]`, root);
+    this.btn = $('[data-act="toggle"]', root);
+    recorders.push(this);
+    this.btn.addEventListener("click", () => {
+      if (this.phase === "requesting") this.cancel();
+      else if (this.phase === "recording") this.stop();
+      else if (this.phase === "idle") this.start();
+    });
+    const file = this.el("file");
+    if (file) file.addEventListener("change", async () => {
+      const selected = file.files[0]; file.value = "";
+      if (!selected || recordingOwner || this.phase !== "idle") return;
+      recordingOwner = this; this.phase = "uploading"; syncRecorderControls();
+      try { await upload(this.kind, selected, selected.type, selected.name); }
+      finally { this.phase = "idle"; recordingOwner = null; syncRecorderControls(); }
+    });
+    syncRecorderControls();
+  }
+  async start() {
+    if (recordingOwner || this.phase !== "idle") return;
+    if (!window.MediaRecorder) {
+      this.el("result").innerHTML = errHtml({error: "เบราว์เซอร์นี้ยังอัดเสียงไม่ได้ กรุณาเปิดด้วย Safari หรือ Chrome รุ่นล่าสุด"});
+      return;
+    }
+    const run = {chunks: [], listeners: [], cleaned: false, finished: false};
+    this.run = run; recordingOwner = this; this.phase = "requesting";
+    this.root.dataset.starting = "true";
+    this.btn.textContent = "ยกเลิกการเปิดไมค์";
+    this.el("result").innerHTML = '<div class="msg" role="status">กำลังขอใช้ไมโครโฟน… กดอนุญาตในเบราว์เซอร์ หรือกดยกเลิก</div>';
+    syncRecorderControls();
+    document.querySelectorAll("audio").forEach(audio => audio.pause());
+    // Resume in the tap handler, before awaiting permission. A meter must never block recording.
+    try {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioContextClass) {
+        run.context = new AudioContextClass();
+        if (run.context.state === "suspended") run.context.resume()?.catch(() => {});
+      }
+    } catch (_) {}
+    try {
+      const stream = await getMic();
+      if (this.run !== run || this.phase !== "requesting") { stopMicTracks(stream); return; }
+      run.stream = stream;
+      if (document.hidden) { this.cancel("ยกเลิกการเปิดไมค์เมื่อออกจากหน้านี้ กลับมาแล้วกดเริ่มอัดอีกครั้ง"); return; }
+      try {
+        if (run.context) {
+          run.source = run.context.createMediaStreamSource(stream);
+          run.analyser = run.context.createAnalyser(); run.analyser.fftSize = 2048;
+          run.source.connect(run.analyser); run.buffer = new Float32Array(run.analyser.fftSize);
+        }
+      } catch (_) { run.analyser = null; }
+      const mime = pickMime();
+      const recorder = new MediaRecorder(stream, mime ? {mimeType: mime} : undefined);
+      run.recorder = recorder; this.mr = recorder;
+      recorder.ondataavailable = event => { if (!run.finished && event.data?.size) run.chunks.push(event.data); };
+      recorder.onstop = () => this.finish(run);
+      recorder.onerror = event => {
+        if (this.run !== run || run.finished) return;
+        run.error = {error: "การอัดเสียงสะดุด กรุณาลองอัดใหม่โดยเปิดหน้านี้ไว้", detail: String(event.error || "MediaRecorder error")};
+        this.stop();
+      };
+      stream.getAudioTracks().forEach(track => {
+        for (const event of ["ended", "mute"]) {
+          const handler = () => {
+            if (this.run === run && this.phase === "recording") this.stop("ไมโครโฟนถูกขัดจังหวะ หยุดอัดแล้ว กรุณาฟังตรวจสอบหรืออัดใหม่");
+          };
+          track.addEventListener(event, handler); run.listeners.push([track, event, handler]);
+        }
+      });
+      recorder.start(250);
+      // A replacement becomes authoritative only after recording actually starts.
+      delete ST.pending[this.kind];
+      this.root.closest(".card").classList.remove("done");
+      updateCreateBtn();
+      this.phase = "recording"; delete this.root.dataset.starting;
+      run.started = performance.now();
+      this.btn.textContent = "■ หยุดอัด"; this.btn.classList.add("on");
+      this.el("result").innerHTML = "";
+      run.deadline = setTimeout(() => { if (this.run === run) this.stop(); }, this.max * 1000);
+      syncRecorderControls(); this.tick(run);
+    } catch (error) {
+      if (this.run !== run) return;
+      this.cleanup(run); this.release(run);
+      this.el("result").innerHTML = errHtml(error);
+    }
+  }
+  tick(run) {
+    if (this.run !== run || this.phase !== "recording") return;
+    if (run.analyser && run.context?.state === "running") {
+      try {
+        run.analyser.getFloatTimeDomainData(run.buffer);
+        let square = 0, peak = 0;
+        for (const value of run.buffer) { square += value * value; peak = Math.max(peak, Math.abs(value)); }
+        const db = 20 * Math.log10(Math.sqrt(square / run.buffer.length) || 1e-6);
+        this.el("meter").style.width = Math.max(0, Math.min(100, (db + 60) / 60 * 100)) + "%";
+        this.el("level").textContent = peak > .98 ? "ดังเกิน! ถอยห่างไมค์นิดนึง" : db < -45 ? "เบามาก — พูดใกล้ไมค์ขึ้น" : db < -30 ? "ค่อนข้างเบา" : "กำลังดี";
+      } catch (_) { run.analyser = null; }
+    } else this.el("level").textContent = "กำลังอัดเสียง — เปิดหน้านี้ไว้และอย่าล็อกหน้าจอ";
+    const elapsed = (performance.now() - run.started) / 1000;
+    this.el("timer").textContent = `${elapsed.toFixed(1)} / ${this.max} วิ`;
+    const progress = this.el("prog");
+    if (progress) progress.querySelector("i").style.width = Math.min(100, elapsed / this.max * 100) + "%";
+    if (elapsed >= this.max) { this.stop(); return; }
+    run.frame = requestAnimationFrame(() => this.tick(run));
+  }
+  cleanup(run) {
+    if (run.cleaned) return;
+    run.cleaned = true;
+    clearTimeout(run.deadline); cancelAnimationFrame(run.frame);
+    run.listeners.forEach(([track, event, handler]) => track.removeEventListener(event, handler));
+    stopMicTracks(run.stream);
+    try { run.source?.disconnect(); run.analyser?.disconnect(); } catch (_) {}
+    try { run.context?.close()?.catch(() => {}); } catch (_) {}
+  }
+  cancel(message = "ยกเลิกการเปิดไมค์แล้ว กดเริ่มอัดเมื่อต้องการลองอีกครั้ง") {
+    if (this.phase !== "requesting") return;
+    const run = this.run; this.cleanup(run); this.release(run);
+    this.el("result").innerHTML = `<div class="msg" role="status">${esc(message)}</div>`;
+  }
+  stop(reason = "") {
+    const run = this.run;
+    if (!run || this.phase !== "recording") return;
+    this.phase = "stopping"; run.reason = reason;
+    this.root.dataset.starting = "true";
+    this.btn.classList.remove("on"); this.btn.textContent = "กำลังบันทึก…";
+    syncRecorderControls();
+    try { if (run.recorder.state !== "inactive") run.recorder.stop(); }
+    catch (error) { run.error = {error: "บันทึกเสียงไม่สำเร็จ กรุณาอัดใหม่", detail: String(error)}; this.finish(run); }
+    this.cleanup(run);
+    this.el("meter").style.width = "0";
+  }
+  async finish(run) {
+    if (this.run !== run || run.finished) return;
+    run.finished = true; this.cleanup(run);
+    this.phase = "uploading"; this.root.dataset.starting = "true";
+    this.btn.classList.remove("on"); this.btn.textContent = "กำลังตรวจเสียง…";
+    syncRecorderControls();
+    try {
+      if (run.error) throw run.error;
+      const type = run.recorder.mimeType || run.chunks[0]?.type || "application/octet-stream";
+      const blob = new Blob(run.chunks, {type});
+      if (!blob.size) throw {error: "ยังไม่มีเสียงที่บันทึกได้ กรุณากดเริ่มอัดแล้วพูดใหม่"};
+      await upload(this.kind, blob, type, "");
+      if (run.reason) this.el("result").innerHTML += `<div class="msg warn" role="status">${esc(run.reason)}</div>`;
+    } catch (error) { this.el("result").innerHTML = errHtml(error); }
+    finally { this.release(run); }
+  }
+  release(run) {
+    if (this.run !== run) return;
+    this.run = null; this.mr = null; this.phase = "idle";
+    if (recordingOwner === this) recordingOwner = null;
+    delete this.root.dataset.starting;
+    this.btn.classList.remove("on"); this.btn.textContent = "● อัดใหม่";
+    this.el("meter").style.width = "0";
+    $("#recording-navigation-warning")?.remove(); syncRecorderControls();
+  }
+}
+function interruptRecording() {
+  if (recordingOwner?.phase === "requesting") recordingOwner.cancel("ยกเลิกการเปิดไมค์เมื่อออกจากหน้านี้ กลับมาแล้วกดเริ่มอัดอีกครั้ง");
+  else if (recordingOwner?.phase === "recording") recordingOwner.stop("หยุดอัดเมื่อออกจากหน้าสตูดิโอ กรุณาฟังตรวจสอบหรืออัดใหม่โดยเปิดหน้านี้ไว้");
+}
+document.addEventListener("visibilitychange", () => { if (document.hidden) interruptRecording(); });
+window.addEventListener("pagehide", interruptRecording);
+
+async function upload(kind, blob, type, filename) {
+  const root = document.querySelector(`.rec[data-kind="${kind}"]`);
+  const res = $('[data-el="result"]', root);
+  if (root.dataset.uploading) return;
+  root.dataset.uploading = "true";
+  const controls = root.querySelectorAll('[data-act="toggle"], [data-el="file"]');
+  controls.forEach(el => el.disabled = true);
+  delete ST.pending[kind];
+  root.closest(".card").classList.remove("done");
+  updateCreateBtn();
+  res.innerHTML = `<div class="msg"><span class="spin"></span>กำลังแปลงและตรวจเสียง…</div>`;
+  try {
+    let j;
+    if (ST.cloud) {
+      if (!blob.size) throw {error: "ไฟล์เสียงว่างเปล่า กรุณาอัดหรือเลือกไฟล์ใหม่"};
+      if (blob.size > 40 * 1024 * 1024) throw {error: "ไฟล์เสียงใหญ่เกิน 40 MB กรุณาเลือกไฟล์ที่เล็กลง"};
+      const uploadId = crypto.randomUUID().replaceAll("-", "");
+      const chunkSize = 2 * 1024 * 1024;
+      const totalChunks = Math.ceil(blob.size / chunkSize);
+      for (let index = 0; index < totalChunks; index++) {
+        const percent = Math.round(index / totalChunks * 100);
+        res.innerHTML = `<div class="msg" role="status"><span class="spin"></span>กำลังอัปโหลดเสียง… ${percent}%</div>`;
+        const q = new URLSearchParams({upload_id: uploadId, index});
+        await api("/api/upload/chunk?" + q, {method: "POST", headers: {"Content-Type": "application/octet-stream"}, body: blob.slice(index * chunkSize, (index + 1) * chunkSize)});
+      }
+      res.innerHTML = `<div class="msg" role="status"><span class="spin"></span>อัปโหลดครบแล้ว กำลังแปลงและตรวจเสียง…</div>`;
+      j = await api("/api/sample?" + new URLSearchParams({kind}), {method: "POST", headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({upload_id: uploadId, total_chunks: totalChunks, filename: filename || "", content_type: type || "application/octet-stream"})});
+    } else {
+      const q = new URLSearchParams({kind, filename: filename || ""});
+      j = await api("/api/sample?" + q, {method: "POST", headers: {"Content-Type": type || "application/octet-stream"}, body: blob});
+    }
+    ST.pending[kind] = j; renderClip(kind, j);
+  } catch (e) { delete ST.pending[kind]; res.innerHTML = errHtml(e); }
+  finally { delete root.dataset.uploading; controls.forEach(el => el.disabled = false); }
+  updateCreateBtn();
+}
+function renderClip(kind, j) {
+  const root = document.querySelector(`.rec[data-kind="${kind}"]`);
+  const m = j.metrics || {};
+  const msgs = [];
+  if (j.ok) msgs.push(`<div class="msg ok">✓ ผ่าน — ยาว ${m.duration?.toFixed(1)} วิ</div>`);
+  for (const e of j.errors || []) msgs.push(`<div class="msg err">${esc(e)}</div>`);
+  for (const w of j.warnings || []) msgs.push(`<div class="msg warn">${esc(w)}</div>`);
+  $('[data-el="result"]', root).innerHTML =
+    `<audio controls preload="metadata" src="${fileUrl(j.wav)}"></audio>` + msgs.join("") +
+    `<div class="metrics">ยาว ${m.duration} วิ · ระดับเสียงพูด ${m.speech_dbfs} dBFS · เสียงพื้นหลัง ${m.noise_floor_dbfs} dBFS · ห่างกัน ${m.snr_db} dB · พีค ${m.peak_dbfs} dBFS</div>`;
+  root.closest(".card").classList.toggle("done", !!j.ok);
+}
+
+/* ---------------- create voice ---------------- */
+function updateCreateBtn() {
+  const s = ST?.pending?.source, c = ST?.pending?.consent;
+  const ready = s?.ok && c?.ok && $("#ack").checked;
+  $("#create-btn").disabled = !ready;
+  $("#create-hint").textContent = !s ? "ยังไม่มีเสียงตัวอย่าง (ขั้นที่ 1)" : !s.ok ? "เสียงตัวอย่างยังไม่ผ่าน"
+    : !c ? "ยังไม่มีประโยคยินยอม (ขั้นที่ 2)" : !c.ok ? "ประโยคยินยอมยังไม่ผ่าน" : !$("#ack").checked ? "ติ๊กยืนยันก่อน" : "พร้อมสร้าง";
+}
+$("#ack").addEventListener("change", updateCreateBtn);
+$("#create-btn").addEventListener("click", async () => {
+  const btn = $("#create-btn"); btn.disabled = true;
+  $("#create-result").innerHTML = `<div class="msg"><span class="spin"></span>กำลังส่งให้ Google ตรวจประโยคยินยอมและสร้างเสียง…</div>`;
+  try {
+    const j = await api("/api/voices", {method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({display_name: $("#vname").value, consent_lang: consentLang, model: $("#vmodel").value, consent_ack: $("#ack").checked})});
+    $("#create-result").innerHTML = `<div class="msg ok">✓ บันทึกเสียง “${esc(j.voice.display_name)}” แล้ว</div><button class="ghost" data-view="studio">ไปสร้างเสียงพูด →</button>`;
+    ST.pending = {};
+    document.querySelectorAll(".rec [data-el=result]").forEach(el => el.innerHTML = "");
+    document.querySelectorAll("#step-source,#step-consent").forEach(el => el.classList.remove("done"));
+    $("#step-create").classList.add("done");
+    await loadVoices(j.voice.id);
+  } catch (e) { $("#create-result").innerHTML = errHtml(e); }
+  updateCreateBtn();
+});
+async function loadVoices(select) {
+  const previous = select || $("#svoice").value;
+  const j = await api("/api/voices"); VOICES = j.voices;
+  const live = VOICES.filter(v => !v.replaced_by);
+  $("#voice-count").textContent = live.length;
+  const list = VOICES.map(v => `
+    <article class="item voice-item">
+      <div class="item-top"><div class="voice-identity"><span class="avatar-wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div><b>${esc(v.display_name)}${v.mock ? '<span class="badge mock">mock</span>' : ""}${v.expired ? '<span class="badge bad">หมดอายุ</span>' : ""}${v.replaced_by ? '<span class="badge">มีตัวใหม่แล้ว</span>' : ""}</b><p class="voice-meta">สร้าง ${fmtDate(v.created_at)}</p></div></div><span class="badge">${v.expired ? "หมดอายุ" : daysLeft(v.expires)}</span></div>
+      <div class="actions">
+        ${!v.replaced_by ? `<button class="ghost" data-use="${esc(v.id)}">ใช้เสียงนี้ →</button>` : ""}
+        ${v.can_recreate ? `<button class="ghost" data-recreate="${esc(v.id)}">สร้างใหม่จากไฟล์เดิม</button>` : ""}
+        ${v.source_wav ? `<a href="${fileUrl(v.source_wav)}" target="_blank" rel="noopener">ฟังต้นฉบับ ↗</a>` : ""}
+      </div>
+      <details class="technical"><summary>รายละเอียดเสียง</summary><div class="mono">${esc(v.id)}</div></details>
+    </article>`).join("");
+  $("#voices").innerHTML = list || `<div class="empty">ยังไม่มีเสียงในสตูดิโอ<br>เริ่มด้วยการอัดเสียงตัวอย่างและประโยคยินยอม<br><button class="ghost" data-view="enroll">เพิ่มเสียงแรกของคุณ</button></div>`;
+  $("#svoice").innerHTML =
+    (live.length ? `<optgroup label="เสียงในสตูดิโอ">${live.map(v => `<option value="${esc(v.id)}">${esc(v.display_name)}${v.mock ? " (mock)" : ""}${v.expired ? " (หมดอายุ)" : ""}</option>`).join("")}</optgroup>` : "") +
+    `<optgroup label="เสียงสำเร็จรูปจาก Google">${PREBUILT.map(n => `<option value="${n}">${n}</option>`).join("")}</optgroup>`;
+  if (Array.from($("#svoice").options).some(o => o.value === previous)) $("#svoice").value = previous;
+  renderSelectedVoice(); updateSpeakButton();
+}
+$("#voices").addEventListener("click", async e => {
+  const use = e.target.closest("[data-use]"), rec = e.target.closest("[data-recreate]");
+  if (use) { $("#svoice").value = use.dataset.use; renderSelectedVoice(); saveDraft(); showView("studio"); if (!matchMedia("(max-width:900px)").matches) $("#text").focus({preventScroll:true}); }
+  if (rec) {
+    rec.disabled = true; rec.innerHTML = `<span class="spin"></span>กำลังสร้างใหม่…`;
+    $("#library-result").innerHTML = `<div class="msg"><span class="spin"></span>กำลังสร้างเสียงใหม่จากไฟล์ต้นฉบับ…</div>`;
+    try { const j = await api("/api/voices/recreate", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({id: rec.dataset.recreate})});
+      $("#library-result").innerHTML = `<div class="msg ok">✓ สร้างเสียง “${esc(j.voice.display_name)}” ใหม่แล้ว</div>`; await loadVoices(j.voice.id);
+    } catch (err) { $("#library-result").innerHTML = errHtml(err); rec.disabled = false; rec.textContent = "สร้างใหม่จากไฟล์เดิม"; }
+  }
+});
+
+/* ---------------- speak ---------------- */
+function renderStyles() {
+  if (!ST) return;
+  const keys = Object.keys(ST.styles);
+  $("#styles").innerHTML = keys.map(k => `<button class="chip" data-style="${k}" aria-pressed="${k === styleKey}">${esc(ST.styles[k].label)}</button>`).join("")
+    + `<button class="chip" data-style="custom" aria-pressed="${styleKey === "custom"}">กำหนดเอง</button>`;
+  $("#custom-style").hidden = styleKey !== "custom";
+  const descriptions = {
+    story: "น้ำเสียงอบอุ่น มีจังหวะ เหมาะกับการเล่านิทานและเรื่องราว",
+    natural: "ใช้บุคลิกและน้ำเสียงตามต้นฉบับ",
+    custom: "บอกอารมณ์ ความเร็ว และวิธีเล่าที่คุณต้องการ"
+  };
+  $("#style-hint").textContent = descriptions[styleKey] || (ST.styles[styleKey]?.style ? "ปรับการอ่านตามสไตล์ที่เลือก โดยคงข้อความเดิม" : "ใช้บุคลิกและน้ำเสียงตามต้นฉบับ");
+}
+$("#styles").addEventListener("click", e => { const b = e.target.closest("[data-style]"); if (b) { styleKey = b.dataset.style; renderStyles(); saveDraft(); } });
+$("#text").addEventListener("input", updateTextCount);
+$("#speak-btn").addEventListener("click", async () => {
+  if (speaking || !$("#text").value.trim()) return;
+  const btn = $("#speak-btn"); speaking = true; updateSpeakButton();
+  btn.innerHTML = `<span class="spin"></span>กำลังสร้างเสียง…`;
+  const text = $("#text").value;
+  const style = styleKey === "custom" ? $("#custom-style").value : ST.styles[styleKey].style;
+  const est = Math.max(1, Math.ceil(text.length / 2500));
+  $("#speak-result").innerHTML = `<div class="msg"><span class="spin"></span>กำลังสร้างเสียง${est > 1 ? ` (${est} ท่อน อาจใช้เวลาเป็นนาที)` : "…"}</div>`;
+  try {
+    const j = await api("/api/speak", {method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({voice: $("#svoice").value, text, style, model: $("#smodel").value})});
+    const it = j.item;
+    $("#speak-result").innerHTML = `<div class="msg ok">✓ สร้างเสียงแล้ว กด ▶ เพื่อฟัง</div><audio controls playsinline preload="metadata" src="${fileUrl(it.mp3)}"></audio>
+      <div class="actions"><a class="file-download" href="${fileUrl(it.mp3, true)}">ดาวน์โหลด MP3</a>${it.wav ? `<a class="file-download" href="${fileUrl(it.wav, true)}">ดาวน์โหลด WAV</a>` : ""}
+      <span class="hint">ยาว ${it.duration.toFixed(1)} วิ · ${it.chunks} ท่อน${it.mock ? " · MOCK" : ""}</span></div>`;
+    try { await loadHistory(); } catch (historyError) { $("#history").innerHTML = errHtml({error:"สร้างเสียงสำเร็จ แต่โหลดประวัติไม่สำเร็จ กรุณารีเฟรชหน้าเพื่อดูผลงานทั้งหมด"}); }
+  } catch (e) { $("#speak-result").innerHTML = errHtml(e); }
+  speaking = false; updateSpeakButton();
+  btn.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>สร้างเสียงพูด`;
+});
+
+/* ---------------- history ---------------- */
+async function loadHistory() {
+  const j = await api("/api/history");
+  $("#history-count").textContent = `${j.history.length} ผลงาน`;
+  $("#history").innerHTML = j.history.length ? j.history.map(h => `
+    <article class="item history-item">
+      <div class="item-top"><b>${esc(h.voice_name)}${h.mock ? '<span class="badge mock">mock</span>' : ""}</b><span class="duration">${Math.floor(h.duration / 60)}:${String(Math.floor(h.duration % 60)).padStart(2,"0")}</span></div>
+      <div class="preview">${esc(h.text_preview)}</div>
+      <span class="hint">${fmtDate(h.created_at)}</span>
+      ${h.style ? `<details class="technical"><summary>สไตล์การพูด</summary><div>${esc(h.style)}</div></details>` : ""}
+      <div class="actions">${h.mp3 ? `<audio controls playsinline aria-label="ฟังผลงาน ${esc(h.voice_name)} ${fmtDate(h.created_at)}" preload="none" src="${fileUrl(h.mp3)}"></audio><a class="download-link" href="${fileUrl(h.mp3, true)}" aria-label="ดาวน์โหลด MP3 ${esc(h.voice_name)}" title="ดาวน์โหลด MP3"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span class="mobile-only">ดาวน์โหลด MP3</span></a>` : ""}</div>
+    </article>`).join("") : `<div class="empty">ผลงานแรกของคุณเริ่มได้จากบทพูดด้านบน<br>เลือกเสียง ใส่ข้อความ แล้วกด “สร้างเสียงพูด”</div>`;
+}
+
+/* ---------------- boot ---------------- */
+(async () => {
+  renderPassages(0);
+  try {
+    ST = await api("/api/status");
+    renderStatus();
+    document.querySelectorAll(".rec").forEach(r => new Recorder(r));
+    updateSpeakButton();
+    await Promise.all([loadVoices(), loadHistory()]);
+    restoreDraft();
+  } catch (e) {
+    $("#banner").innerHTML = errHtml(e) + `<button class="ghost" id="retry-boot">ลองเชื่อมต่อใหม่</button>`;
+    $("#retry-boot").addEventListener("click", () => location.reload());
+  }
+})();
+</script>
+</body>
+</html>
